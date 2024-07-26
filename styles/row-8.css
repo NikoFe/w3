@@ -1,0 +1,14 @@
+#row-8 {
+  background-color: black;
+  color: white;
+  padding: 2px 15px;
+  font-size: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#row-8 img {
+  width: 85px;
+  height: fit-content;
+  padding: 5px;
+}

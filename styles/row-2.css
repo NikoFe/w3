@@ -1,0 +1,31 @@
+#row-2 {
+  background-image: linear-gradient(rgb(30, 80, 142), rgb(18, 63, 117));
+  color: white;
+  height: fit-content;
+  gap: 0px;
+  border-top: solid 1px white;
+}
+
+#row-2 .main-wrapper {
+  height: 25px;
+
+  display: flex;
+  margin-top: 0px;
+  align-items: end;
+}
+
+#row-2 button {
+  color: rgb(228, 228, 228);
+  padding: 5px;
+  margin: 0px;
+  width: 155px;
+  height: 25px;
+  border-top: solid 1px white;
+
+  background-image: linear-gradient(rgb(30, 80, 142), rgb(7, 42, 84));
+}
+
+#house-button {
+  width: 50px !important;
+  /* height: 35px !important;*/
+}

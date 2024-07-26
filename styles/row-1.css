@@ -1,0 +1,41 @@
+#row-1 {
+  background-color: rgb(9, 42, 103);
+  color: white;
+  justify-content: space-between;
+  height: 55px;
+  margin: 0px;
+  padding-bottom: 5px;
+}
+#row-1 img {
+  margin-top: 5px;
+  width: 180px;
+  height: 42px;
+}
+
+#row-1 .main-wrapper {
+  padding-top: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#row-1-right {
+  display: flex;
+}
+
+#row-1-right i {
+  margin-right: 8px;
+}
+
+.top-buttons {
+  height: fit-content;
+  background-color: chartreuse;
+  width: 125px;
+
+  padding: 5px 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.top-buttons:hover {
+  background-color: red;
+}

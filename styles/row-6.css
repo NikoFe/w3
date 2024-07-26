@@ -1,0 +1,57 @@
+#row-6 {
+  background-color: white;
+  color: black;
+  margin-bottom: 12px;
+}
+
+#row-6-left {
+  display: flex;
+  gap: 16px;
+  background-color: lightcoral;
+  margin: 14px;
+  margin-right: 25px;
+  height: fit-content;
+}
+
+.car-div {
+  padding: 5px 0px;
+  display: flex;
+  background-color: lightgray;
+  flex-direction: column;
+  justify-content: start;
+  gap: 6px;
+}
+.car-div p {
+  margin-top: 2px;
+  margin-left: 6px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#row-6 img {
+  width: 190px;
+}
+
+#row-6-right {
+  padding: 18px;
+  width: 405px;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+}
+
+.price {
+  align-self: flex-end;
+
+  margin-right: 10px;
+}
+
+.row-6-text {
+  display: flex;
+  color: orangered;
+  align-items: center;
+}

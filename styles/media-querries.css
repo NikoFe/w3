@@ -1,0 +1,12 @@
+@media screen and (max-width: 992px) {
+  #row-2 {
+    display: none;
+  }
+  #row-3 {
+    margin-top: 230px;
+    margin-bottom: 15px;
+  }
+  #row-3-bottom:first-child {
+    display: none;
+  }
+}

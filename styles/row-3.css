@@ -1,0 +1,167 @@
+#row-3 {
+  background-color: white;
+  flex-direction: column;
+  margin-bottom: 280px;
+  /*padding: 15px;*/
+  border-radius: 5px;
+}
+#row-3 h3 {
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+#row-3-top {
+  gap: 7px;
+  flex-direction: column;
+  display: flex;
+}
+
+.row-3-top-sub {
+  display: flex;
+}
+
+.row-3-dropdown {
+  min-width: 285px;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+.dropdown-from {
+  border: solid 1px lightgray;
+  display: flex;
+  justify-content: space-between;
+  width: 135px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.dropdown-to {
+  border: solid 1px lightgray;
+  display: flex;
+  justify-content: space-between;
+  width: 135px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-right: 10px;
+}
+
+.dropdowns {
+  border: solid 1px lightgray;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  font-size: 13.5px;
+}
+.dropdowns p {
+  margin: 0px;
+}
+
+.last {
+  margin-right: 0px;
+}
+
+#filter-button {
+  padding: 5px 10px;
+  width: 625px;
+  height: 35px;
+  border-radius: 2px;
+  background-color: white;
+  border: solid 0.5px lightgray;
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+}
+
+#filter-button i {
+  color: orangered;
+}
+
+#search-button {
+  display: flex;
+  height: 35px;
+  align-items: center;
+  background-color: rgb(255, 123, 0);
+  color: white;
+  font-weight: bold;
+  gap: 15px;
+  padding: 0px;
+  width: 310px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#magnifying-div {
+  border: solid 0.5px gray;
+  height: 95%;
+  width: 48px;
+  align-items: center;
+
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#magnifying-div i {
+  font-size: 15px !important;
+}
+
+#row-3-bottom {
+  gap: 0px;
+}
+
+.row-3-button {
+  padding: 8px 0px;
+  height: 50px;
+  margin-right: -5px;
+  border: solid 0.1px lightgray;
+  border-radius: 5px;
+}
+
+.row-3-button img {
+  width: 60px;
+}
+
+#padding-div {
+  padding: 15px;
+}
+
+#row-3-middle {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  margin-top: 7px;
+  gap: 12px;
+}
+
+#car-button {
+  width: 138px;
+  background-color: white;
+}
+
+#motorbike-button {
+  width: 140px;
+}
+
+#truck-button {
+  width: 139px;
+}
+
+#tractor-button {
+  width: 146px;
+}
+
+#RV-button {
+  width: 139px;
+}
+
+#parts-button {
+  width: 140px;
+}
+
+#tires-button {
+  width: 138px;
+}

@@ -1,0 +1,50 @@
+#row-5 {
+  background-color: white;
+  color: black;
+  flex-direction: column;
+  padding: 15px 25px;
+  margin-bottom: 10px;
+}
+
+#row-5 p,
+#row-5 ul {
+  color: rgb(101, 101, 101);
+}
+
+#row-5-top {
+  display: flex;
+  gap: 140px;
+}
+
+#row-5 ul {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 13.5px;
+  margin-bottom: 8px;
+}
+
+#row-5 ul li {
+  margin-top: 5px;
+}
+
+#alphabet-button {
+  width: 100%;
+  background-color: white;
+  border: solid 0.5px lightgray;
+  display: flex;
+  justify-content: start;
+  padding: 0px 10px;
+  gap: 10px;
+  color: rgb(101, 101, 101);
+  align-items: center;
+  height: 33px;
+  font-size: 14px;
+}
+
+#alphabet-button i {
+  color: orangered;
+  font-size: 17px;
+}
+#middle-list {
+  margin-left: 30px;
+}
