@@ -36,3 +36,11 @@
 #row-7 ul:last-child li {
   margin-bottom: 5px;
 }
+
+#row-7 ul i {
+  display: none;
+}
+
+#row-7-contact {
+  display: none;
+}

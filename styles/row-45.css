@@ -1,6 +1,48 @@
 #row-45 {
-  height: 500px !important;
+  height: fit-content;
   background-color: burlywood;
-  gap: 50px;
+  gap: 5px;
   padding: 15px;
+  padding-top: 17px;
+  display: none;
+  justify-content: start;
+  margin-bottom: 15px;
+}
+
+#row-45 h4 {
+  margin: 0px;
+  gap: 0px;
+}
+
+.row-45-button {
+  display: flex;
+  flex-direction: column;
+  background-color: none;
+  border: solid 0.5px rgb(176, 176, 176);
+  width: 15%;
+  height: 90px;
+  justify-content: end;
+  padding: 0px;
+  gap: 10px;
+  align-items: center;
+}
+.row-45-button img {
+  object-fit: contain;
+}
+
+.row-45-button-bottom {
+  background-color: lightgray;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#row-45-bottom {
+  gap: 32px;
+  width: 100%;
+}
+.row-45-button img {
+  width: 100px;
 }

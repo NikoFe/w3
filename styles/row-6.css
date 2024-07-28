@@ -27,6 +27,10 @@
   margin-bottom: 0px;
   font-weight: bold;
   font-size: 14px;
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+  overflow: hidden; /* Ensures overflowed text is hidden */
+  text-overflow: ellipsis; /* Displays an ellipsis (...) for overflowing text */
+  max-width: 182px;
 }
 
 #row-6 img {

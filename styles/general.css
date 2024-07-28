@@ -37,8 +37,14 @@ h4 {
   margin: 0pc;
 }
 
+#row-3,
 #row-6,
 .car-div,
-#row-6-right {
+#row-6-right,
+.row-4-div,
+#row-5,
+#row-6,
+#row-45 {
   border: solid 0.5px lightgray;
+  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.4);
 }

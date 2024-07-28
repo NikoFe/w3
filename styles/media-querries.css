@@ -6,7 +6,123 @@
     margin-top: 230px;
     margin-bottom: 15px;
   }
-  #row-3-bottom:first-child {
+  #row-3-bottom {
     display: none;
+  }
+  #row-45 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #row-45-bottom {
+    display: flex;
+  }
+
+  #row-45-bottom p {
+    display: inline;
+  }
+
+  #row-5 li {
+    margin-bottom: 12px;
+  }
+
+  .main-wrapper {
+    width: 100%;
+  }
+  #row-7 {
+    padding-bottom: 12px;
+  }
+
+  #row-7 li {
+    display: none;
+  }
+  #row-7 li:first-child {
+    display: block;
+  }
+
+  #row-7 ul {
+    border-bottom: solid 2px white;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #row-7 .main-wrapper {
+    flex-direction: column;
+    gap: 5px;
+    width: 95%;
+  }
+  #row-7 ul i {
+    display: inline;
+  }
+
+  #row-7-contact {
+    display: inline;
+    border-bottom: none !important;
+  }
+  #row-7-contact-info {
+    display: none !important;
+  }
+  /*                  */
+
+  #row-6 {
+    height: fit-content;
+  }
+
+  #row-6-left {
+    gap: 2%;
+
+    width: 100%;
+  }
+
+  .car-div {
+    display: flex;
+    background-color: lightgray;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .car-div p {
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 14px;
+
+    width: 50px;
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    overflow: hidden; /* Ensures overflowed text is hidden */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) for overflowing text */
+  }
+
+  #row-6-left img {
+    width: 100%;
+  }
+
+  #row-6-right {
+    padding: 24px 18px;
+
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    height: 100%;
+  }
+
+  #row-6-right img {
+    width: 50%;
+  }
+
+  .price {
+    align-self: flex-end;
+
+    margin-right: 10px;
+  }
+
+  .row-6-text {
+    display: flex;
+    color: orangered;
+    align-items: center;
   }
 }
