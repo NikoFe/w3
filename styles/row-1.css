@@ -39,3 +39,7 @@
 .top-buttons:hover {
   background-color: red;
 }
+.row-1-bars {
+  display: none !important;
+  font-size: 35px !important;
+}

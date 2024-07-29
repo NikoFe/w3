@@ -1,8 +1,9 @@
 #row-4 {
   background-color: none;
   color: orange;
-  gap: 20px !important;
+  gap: 17.5px !important;
   margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 
 .row-4-button {

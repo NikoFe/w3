@@ -21,17 +21,6 @@
   justify-content: start;
   gap: 6px;
 }
-.car-div p {
-  margin-top: 2px;
-  margin-left: 6px;
-  margin-bottom: 0px;
-  font-weight: bold;
-  font-size: 14px;
-  white-space: nowrap; /* Prevents text from wrapping to the next line */
-  overflow: hidden; /* Ensures overflowed text is hidden */
-  text-overflow: ellipsis; /* Displays an ellipsis (...) for overflowing text */
-  max-width: 182px;
-}
 
 #row-6 img {
   width: 190px;
@@ -39,8 +28,8 @@
 
 #row-6-right {
   padding: 18px;
-  width: 405px;
-  background-color: green;
+  width: 285px;
+  background-color: lightblue;
   display: flex;
   flex-direction: column;
   align-items: center;

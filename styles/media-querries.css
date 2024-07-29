@@ -108,6 +108,7 @@
     justify-content: start;
     gap: 15px;
     height: 100%;
+    width: 50%;
   }
 
   #row-6-right img {
@@ -124,5 +125,109 @@
     display: flex;
     color: orangered;
     align-items: center;
+  }
+
+  .main-carousel {
+    width: 100%;
+  }
+
+  .flickity-viewport {
+    width: 100% !important;
+  }
+
+  .carousel-cell {
+    width: 32%;
+    margin-left: 13px;
+  }
+
+  #row-4-first,
+  #row-4-third {
+    width: 21%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #row-4-second {
+    width: 23%;
+    align-items: center;
+  }
+
+  #row-4 {
+    gap: 13px !important;
+  }
+
+  #plate-image {
+    width: 120%;
+  }
+  #jamstvo-image {
+    width: 130%;
+  }
+
+  .fa-car {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .regular {
+    display: none;
+  }
+  .dropdown-from,
+  .dropdown-to {
+    width: 50%;
+    margin: 0px;
+  }
+
+  .dropdowns-long {
+    display: flex;
+  }
+  #filter-button {
+    display: none;
+  }
+  #search-button {
+    width: 100%;
+  }
+  #row-3-search-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .row-1-bars {
+    display: block !important;
+  }
+
+  .top-buttons {
+    display: none;
+  }
+
+  #row-3-extra {
+    display: block;
+  }
+
+  #row-4 {
+    height: 250px;
+  }
+
+  #row-4-third {
+    display: block;
+  }
+
+  .row-4-div {
+    height: 45% !important;
+    padding: 0px 45px;
+    width: 20%;
+  }
+
+  #row-1 img {
+    width: 120px;
+    height: fit-content;
+  }
+  #row-1 {
+    height: fit-content;
+  }
+  #top {
+    height: 2px;
   }
 }

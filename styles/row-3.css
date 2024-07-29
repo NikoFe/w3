@@ -45,15 +45,27 @@
   margin-right: 10px;
 }
 
-.dropdowns {
+.dropdowns,
+.dropdowns-long {
   border: solid 1px lightgray;
   display: flex;
   justify-content: space-between;
   padding: 8px 10px;
   font-size: 13.5px;
 }
-.dropdowns p {
+
+.dropdowns p,
+.dropdowns-long p {
   margin: 0px;
+}
+
+.dropdowns-long {
+  width: 90%;
+  display: none;
+}
+
+.dropdowns-long {
+  margin-bottom: 10px;
 }
 
 .last {
@@ -164,4 +176,13 @@
 
 #tires-button {
   width: 138px;
+}
+
+.dropdowns-long {
+  width: 100%;
+}
+
+#row-3-extra {
+  display: none;
+  font-size: 15px;
 }
