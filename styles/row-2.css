@@ -21,11 +21,32 @@
   width: 155px;
   height: 25px;
   border-top: solid 1px white;
-
   background-image: linear-gradient(rgb(30, 80, 142), rgb(7, 42, 84));
+}
+
+#row-2 button a {
+  color: rgb(228, 228, 228);
+  text-decoration: none;
 }
 
 #house-button {
   width: 50px !important;
   /* height: 35px !important;*/
+}
+
+#selected-row-2-button,
+.row-2-button:hover {
+  background-image: none !important;
+  background-color: white !important;
+
+  height: 32px !important;
+  padding-top: 10px !important;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: none;
+}
+#selected-row-2-button a,
+.row-2-button:hover a {
+  font-weight: bold !important;
+  color: black !important;
 }

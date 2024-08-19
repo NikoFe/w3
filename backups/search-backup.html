@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../styles/row-1.css" />
+    <link rel="stylesheet" href="../styles/row-2.css" />
+    <link rel="stylesheet" href="../styles/row-3.css" />
+    <link rel="stylesheet" href="../styles/row-4.css" />
+    <link rel="stylesheet" href="../styles/row-45.css" />
+    <link rel="stylesheet" href="../styles/row-5.css" />
+    <link rel="stylesheet" href="../styles/row-6.css" />
+    <link rel="stylesheet" href="../styles/row-7.css" />
+    <link rel="stylesheet" href="../styles/row-8.css" />
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/media-querries.css" />
+    <link rel="stylesheet" href="../styles/avto-rows.css" />
+    <link rel="stylesheet" href="../styles/search.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../styles/flickity.css" />
+  </head>
+  <body>
+    <!---------------------------------------------------------->
+
+    <div id="top"></div>
+
+    <header id="row-1" class="rows">
+      <div class="main-wrapper">
+        <img src="../images/logo.png" alt="logo.png" />
+
+        <div id="row-1-right">
+          <div class="top-buttons">
+            <i class="fa-solid fa-circle-plus"></i>Objavi oglas
+          </div>
+          <div class="top-buttons">
+            <i class="fa-solid fa-star"></i>Parirano
+          </div>
+          <div class="top-buttons">
+            <i class="fa-solid fa-user-plus"></i>moj.avto.net
+          </div>
+          <i class="fa-solid fa-bars row-1-bars"></i>
+        </div>
+      </div>
+    </header>
+    <!---------------------------------------------------------->
+
+    <div id="row-2" class="rows">
+      <div class="main-wrapper">
+        <button id="house-button">
+          <a href="../index.html">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </button>
+        <button class="row-2-button" id="selected-row-2-button">
+          <a href="avto.html">Avto</a>
+        </button>
+        <button class="row-2-button"><a href="moto.html"> Moto</a></button>
+        <button class="row-2-button">
+          <a href="gospodarska.html">Gospodarska</a>
+        </button>
+        <button class="row-2-button">
+          <a href="mehanizacija.html">Mehanizacija</a>
+        </button>
+        <button class="row-2-button">
+          <a href="prosti_cas.html">Prosti čas</a>
+        </button>
+        <button class="row-2-button">
+          <a href="deli_in_oprema.html">Deli in oprema</a>
+        </button>
+      </div>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="main-wrapper">
+      <div class="rubrika">
+        <h3>Rezultati osebna vozila</h3>
+        <button id="search-button" onclick="search()">
+          <div id="magnifying-div">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          Iskanje vozil
+        </button>
+      </div>
+
+      <div id="search">
+        <!---------------------------------------------------------->
+        <div id="search-left">
+          <div class="blue"><p>Preko 1000 oglasov</p></div>
+
+          <div id="search-left-row-1">
+            <h4>rubrika AVTO</h4>
+            <div class="buttons">
+              <button>
+                <i class="fa-solid fa-xmark"></i>
+                <p>PRODAM</p>
+              </button>
+              <button>
+                <i class="fa-solid fa-xmark"></i>
+                <p>Od 100 $ dalje</p>
+              </button>
+            </div>
+          </div>
+
+          <div class="blue"><p>Omejite prikaz:</p></div>
+
+          <div id="search-left-row-2">
+            <div class="custom-list">
+              <h5>Storitve na daljavo</h5>
+
+              <!----------->
+              <div class="custom-li">
+                <div class="left">
+                  <i class="fa-solid fa-caret-right"></i>
+                  <p>Video Klic</p>
+                </div>
+
+                <p>1866</p>
+              </div>
+              <!----------->
+              <div class="custom-li">
+                <div class="left">
+                  <i class="fa-solid fa-caret-right"></i>
+                  <p>Video Klic / Virtual.ogled</p>
+                </div>
+
+                <p>1866</p>
+              </div>
+              <!----------->
+              <div class="custom-li">
+                <div class="left">
+                  <i class="fa-solid fa-caret-right"></i>
+                  <p>Online Nakup</p>
+                </div>
+
+                <p>1701</p>
+              </div>
+            </div>
+            <hr />
+            <!----------->
+            <h5>Znamka</h5>
+            <div class="custom-li">
+              <div class="left">
+                <i class="fa-solid fa-caret-right"></i>
+                <p>Abarth</p>
+              </div>
+
+              <p>47</p>
+            </div>
+            <!----------->
+            <div class="custom-li">
+              <div class="left">
+                <i class="fa-solid fa-caret-right"></i>
+                <p>Aiways</p>
+              </div>
+              <div class="right">
+                <p>4</p>
+              </div>
+            </div>
+            <!----------->
+            <div class="custom-li">
+              <div class="left">
+                <i class="fa-solid fa-caret-right"></i>
+                <p>Aixam</p>
+              </div>
+              <div class="right">
+                <p>31</p>
+              </div>
+            </div>
+            <!----------->
+            <div class="custom-li">
+              <div class="left">
+                <i class="fa-solid fa-caret-right"></i>
+                <p>Alfa Romeo</p>
+              </div>
+              <div class="right">
+                <p>252</p>
+              </div>
+            </div>
+            <!----------->
+            <div class="custom-li">
+              <div class="left">
+                <i class="fa-solid fa-caret-right"></i>
+                <p>Alpine</p>
+              </div>
+              <div class="right">
+                <p>12</p>
+              </div>
+            </div>
+            <!----------->
+            <div class="custom-li">
+              <div class="left">
+                <i class="fa-solid fa-caret-right"></i>
+                <p>Aston Martin</p>
+              </div>
+              <div class="right">
+                <p>6</p>
+              </div>
+            </div>
+            <!----------->
+            <div class="custom-li">
+              <div class="left">
+                <i class="fa-solid fa-caret-right"></i>
+                <p>Audi</p>
+              </div>
+              <div class="right">
+                <p>3830</p>
+              </div>
+            </div>
+            <!----------->
+            <div class="custom-li">
+              <div class="left">
+                <i class="fa-solid fa-caret-right"></i>
+                <p>Austin</p>
+              </div>
+              <div class="right">
+                <p>5</p>
+              </div>
+            </div>
+
+            <p>Storitve na daljavo</p>
+          </div>
+        </div>
+
+        <!---------------------------------------------------------->
+        <div id="search-right">
+          <div id="search-right-row-1">
+            <div id="search-right-row-1-left">
+              <button><i class="fa-solid fa-angle-left"></i>Nazaj</button>
+              <button>Naprej<i class="fa-solid fa-angle-right"></i></button>
+            </div>
+
+            <div id="search-right-row-1-right">
+              <p>Sortiraj:</p>
+              <div class="left dropdown">
+                <p>Novejši oglasi naprej</p>
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div id="search-right-row-2">
+            <h4>TOP PONUDBA:</h4>
+          </div>
+          <div id="search-right-row-3">
+            <!---------------------------------------------------------->
+            <!---------------------------------------------------------->
+            <div id="car-database" class="database">
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>Mazda Mazda3 CD150 AT Attraction</h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e1.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2016</li>
+                      <li>Prevoženih 13337 km</li>
+                      <li>Gorivo e-pogon</li>
+                      <li>Menjalnik ročni menjalnik</li>
+                      <li>Motor 2191 ccm</li>
+                    </ul>
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>5.600 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>
+                    Volkswagen Tiguan R-Line Edition 1.5 TSI DSG -KOT NOV-MRTVI
+                    KOT-NAVI
+                  </h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e2.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2020</li>
+                      <li>Prevoženih 38183 km</li>
+                      <li>Gorivo Bencinski motor</li>
+                      <li>Menjalnik avtomatski menjalnik</li>
+                      <li>Motor 1498 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>5.600 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>
+                    Škoda Octavia RS 2.0 TDI DSG KEYLESS KLJUKA OGR VOLAN MEMORY
+                  </h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e3.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2019</li>
+                      <li>Prevoženih 190250 km</li>
+                      <li>Gorivo diesel motor</li>
+                      <li>Menjalnik avtomatski menjalnik</li>
+                      <li>Motor 1984 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>7.500 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>
+                    Hyundai i20 1.2 CVVT PREMIUM.1LAST.KOT NOV 33000KM.BREZ
+                    POLOGA
+                  </h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e4.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2017</li>
+                      <li>Prevoženih 34006 km</li>
+                      <li>Gorivo bencinski motor</li>
+                      <li>Menjalnik ročni menjalnik</li>
+                      <li>Motor 1248 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>10.200 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>Opel Astra 1.2 TURBO 96KW S S GS ST</h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e5.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2016</li>
+                      <li>Prevoženih 7000 km</li>
+                      <li>Gorivo plin</li>
+                      <li>Menjalnik ročni menjalnik</li>
+                      <li>Motor 1199 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>3.600 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>
+                    Citroen C3 1.2 1.lastnik 56.111km HITRI KREDIT LEANPAY
+                  </h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e6.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2019</li>
+                      <li>Prevoženih 56111 km</li>
+                      <li>Gorivo e-pogon</li>
+                      <li>Menjalnik ročni menjalnik</li>
+                      <li>Motor 1199 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>5.000 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>Audi A6 Avant 3.0 TDI clean diesel S tronic 160kW</h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e7.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2015</li>
+                      <li>Prevoženih 281000 km</li>
+                      <li>Gorivo diesel motor</li>
+                      <li>Menjalnik avtomatski menjalnik</li>
+                      <li>Motor 2967 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>7.000 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>Opel Astra GTC 1.7 CDTI Enjoy</h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e8.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2007</li>
+                      <li>Prevoženih</li>
+                      <li>Gorivo diesel motor</li>
+                      <li>Menjalnik ročni menjalnik</li>
+                      <li>Motor 1686 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>8.600 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>Citroen C4 Feel BlueHDi 100 BVM</h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e9.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2016</li>
+                      <li>Prevoženih 15500 km</li>
+                      <li>Gorivo diesel motor</li>
+                      <li>Menjalnik ročni menjalnik</li>
+                      <li>Motor 1560 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>9.000 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>Audi A6 Avant 2.0 TDI ultra quattro S tronic 140kW</h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e10.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2017</li>
+                      <li>Prevoženih 213289 km</li>
+                      <li>Gorivo diesel motor</li>
+                      <li>Menjalnik avtomatski menjalnik</li>
+                      <li>Motor 1968 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>9.900 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>
+                    BMW serija 3 Cabrio: 320i
+                    cabrio+125KW+SLO+BIXENON+ALU+USNJE+BREZPOLOGA
+                  </h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e11.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2007</li>
+                      <li>Prevoženih 196400 km</li>
+                      <li>Gorivo bencinski motor</li>
+                      <li>Menjalnik ročni menjalnik</li>
+                      <li>Motor 1995 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>2.300$</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>
+                    Renault Captur Intens TCe 90 - Slovenski - 1. Lastnica -
+                    Odličen
+                  </h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e12.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2019</li>
+                      <li>Prevoženih 74400 km</li>
+                      <li>Gorivo bencinski motor</li>
+                      <li>Menjalnik ročni menjalnik</li>
+                      <li>Motor 898 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>500 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+              <div class="example">
+                <div class="example-row-1">
+                  <h4>
+                    BMW serija 1: 128ti-AUT.-HITRI KREDIT-LEASING-TOVARNIŠKA
+                    GARAN.
+                  </h4>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="example-row-2">
+                  <div class="top-ponudba">
+                    <p>TOP-PONUDBA</p>
+                  </div>
+                  <div class="example-left">
+                    <img src="../images/e13.jpg" alt="" />
+                  </div>
+                  <div class="full-vertical-line"></div>
+                  <div class="example-right">
+                    <ul>
+                      <li>1. registracija 2023</li>
+                      <li>Prevoženih 1694 km</li>
+                      <li>Gorivo bencinski motor</li>
+                      <li>Menjalnik avtomatski menjalnik</li>
+                      <li>Motor 1998 ccm</li>
+                    </ul>
+
+                    <div class="example-right-bottom">
+                      <img src="../images/example-add-1.png" alt="" />
+                      <div class="price-div"><p>900 $</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---------------------------------------------------------->
+
+              <!--///////////////////////////////////////////////////////////-->
+            </div>
+          </div>
+          <div id="empty-search">
+            <div id="red">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <p>Ni zadetkov</p>
+            </div>
+            <div id="search-warning">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <p>
+                Trenutno med oglasi ni zadetkov, ki bi ustrezali vaših
+                kriterijem iskanja. Kriteriji, ki ste jih uporabili za neuspešno
+                iskanje, so prikazani na levi strani.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!---------------------------------------------------------->
+      </div>
+    </div>
+
+    <!---------------------------------------------------------->
+
+    <div id="row-7" class="rows">
+      <div class="main-wrapper">
+        <ul class="row-7-list">
+          <li>Rubrike</li>
+          <li>Avto</li>
+          <li>Moto</li>
+          <li>Gospodarska vozila</li>
+          <li>Mehanizacija</li>
+          <li>Prosti čas</li>
+          <li>Deli in oprema</li>
+          <i class="fa-solid fa-plus"></i>
+        </ul>
+        <ul class="row-7-list">
+          <li>moj.avto.net</li>
+          <li>Registracija</li>
+          <li>Prijava v sistem</li>
+          <li>Objavite nov oglas</li>
+          <li>Urejanje oglasa</li>
+          <i class="fa-solid fa-plus"></i>
+        </ul>
+        <ul class="row-7-list">
+          <li>O podjetju</li>
+          <li>Pomoč uporabnikom</li>
+          <li>O piškotkih</li>
+          <li>Oglaševanje</li>
+          <li>Zaposlitev</li>
+          <li class="li-further">Pravno obvestilo</li>
+          <li>Varstvo zasebnosti</li>
+          <i class="fa-solid fa-plus"></i>
+        </ul>
+        <ul class="row-7-list">
+          <li>Avtonet d.o.o.</li>
+          <li>Obala 77</li>
+          <li>SI-6320 Portorož</li>
+          <li>T: 080 / 28 77</li>
+          <i class="fa-solid fa-plus"></i>
+        </ul>
+
+        <ul class="row-7-list" id="row-7-contact">
+          <li>Kontaktni podatki</li>
+        </ul>
+      </div>
+    </div>
+    <div id="row-8" class="rows">
+      <a>© Avtonet d.o.o. 2024</a>
+      <img src="../images/logo.png" alt="logo.png" />
+    </div>
+    <!------>
+    <!--<script src="../script/index.js"></script>-->
+    <script src="../script/search.js"></script>
+    <script src="../script/general.js"></script>
+  </body>
+</html>

@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+gorivo-dropdown<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <title>Document</title>
+    <title>Car Home</title>
     <link rel="stylesheet" href="styles/row-1.css" />
     <link rel="stylesheet" href="styles/row-2.css" />
     <link rel="stylesheet" href="styles/row-3.css" />
@@ -27,11 +26,9 @@
     <!---------------------------------------------------------->
 
    <div id="top"></div>
-
-
     <header id="row-1" class="rows">
       <div class="main-wrapper">
-        <img src="images/logo.png" alt="logo.png" />
+        <img src="images/logo.png" alt="logo.png" onclick="showData()"/>
 
 
 
@@ -48,13 +45,15 @@
 
       <div id="row-2" class="rows">
         <div class="main-wrapper">
-        <button id="house-button"><i class="fa-solid fa-house"></i></button>
-        <button class="row-2-button">Avto</button>
-        <button class="row-2-button">Moto</button>
-        <button class="row-2-button">Gospodarska</button>
-        <button class="row-2-button">Mehanizacija</button>
-        <button class="row-2-button">Prosti čas</button>
-        <button class="row-2-button">Deli in oprema</button>
+        <button id="house-button" >       <a href="">
+          <i class="fa-solid fa-house"></i>
+        </a></button>
+        <button class="row-2-button"><a href="pages/avto.html">Avto</a></button>
+        <button class="row-2-button"><a href="pages/moto.html"> Moto</a></button>
+        <button class="row-2-button"><a href="pages/gospodarska.html">Gospodarska</a></button>
+        <button class="row-2-button"><a href="pages/mehanizacija.html">Mehanizacija</a></button>
+        <button class="row-2-button"><a href="pages/prosti_cas.html">Prosti čas</a></button>
+        <button class="row-2-button"><a href="pages/deli_in_oprema.html">Deli in oprema</a></button>
     </div>
       </div>
       <!---------------------------------------------------------->
@@ -63,44 +62,363 @@
         <div id="padding-div">
         <h3>Hitro iskanje osebnih vozil</h3>
 
-        <div class="row-3-dropdown dropdowns-long "><p>Vse znamke</p> <i class="fa-solid fa-caret-down"></i></div>
-        <div class="row-3-dropdown dropdowns-long "><p>Vsi modeli</p> <i class="fa-solid fa-caret-down"></i></div>
+        <div class="row-3-dropdown dropdowns-long ">
+          <div class="down">
+            <ul>
+             <li>BMW</li>
+             <li>Citroen</li>
+             <li>Ford</li>
+             <li>Opel</li>
+             <li>Peugeot</li>
+             <li>Renault</li>
+             <li>AEV</li>
+             <li>Skoda</li>
+             <li>Volkswagen</li>
+             <li>Audi</li>
+             <li>Marcedes</li>
+             <li>Mazda</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+            </ul>
+           </div>
+          <p>Vse znamke</p> <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="row-3-dropdown dropdowns-long " >
+          <div class="down">
+            <ul>
+             <li>BMW</li>
+             <li>Citroen</li>
+             <li>Ford</li>
+             <li>Opel</li>
+             <li>Peugeot</li>
+             <li>Renault</li>
+             <li>AEV</li>
+             <li>Skoda</li>
+             <li>Volkswagen</li>
+             <li>Audi</li>
+             <li>Marcedes</li>
+             <li>Mazda</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+             <li>Reno</li>
+            </ul>
+           </div>
+          
+          <p>Vsi modeli</p> <i class="fa-solid fa-caret-down"></i></div>
 
         <div id="row-3-top" class="rows">
        
           <div class="row-3-top-sub">
-            <div class="row-3-dropdown dropdowns regular"><p>Vse znamke</p> <i class="fa-solid fa-caret-down"></i></div>
-            <div class="dropdown-from dropdowns"><p>Cena od</p> <i class="fa-solid fa-caret-down"></i></div>
-            <div class="dropdown-to dropdowns"><p>Cena do</p> <i class="fa-solid fa-caret-down"></i></div>
-            <div class="row-3-dropdown dropdowns last regular"><p>Prevoženih km do</p> <i class="fa-solid fa-caret-down"></i></div>
+
+            <div class="row-3-dropdown dropdowns regular drop  znamka-dropdown" >  
+              <div class="down">
+              <ul>
+                <li>Vse znamke</li>
+               <li>BMW</li>
+               <li>Citroen</li>
+               <li>Ford</li>
+               <li>Opel</li>
+               <li>Peugeot</li>
+               <li>Renault</li>
+               <li>AEV</li>
+               <li>Skoda</li>
+               <li>Volkswagen</li>
+               <li>Audi</li>
+               <li>Marcedes</li>
+               <li>Mazda</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+              </ul>
+             </div>
+             <p>Vse znamke</p> <i class="fa-solid fa-caret-down"></i></div>
+   
+            <div class="dropdown-from dropdowns drop cena-od-dropdown" >              
+              <div class="down">
+              <ul>
+                <li>Cena od</li>
+               <li>od 50 EUR</li>
+               <li>od 100 EUR</li>
+               <li>od 200 EUR</li>
+               <li>od 500 EUR</li>
+               <li>od 1000 EUR</li>
+               <li>od 1500 EUR</li>
+               <li>od 2000 EUR</li>
+               <li>od 2500 EUR</li>
+               <li>od 3000 EUR</li>
+               <li>od 3500 EUR</li>
+               <li>od 4000 EUR</li>
+               <li>od 4500 EUR</li>
+               <li>od 5000 EUR</li>
+               <li>od 6000 EUR</li>
+               <li>od 7000 EUR</li>
+               <li>od 8000 EUR</li>
+               <li>od 9000 EUR</li>
+               <li>od 10000 EUR</li>
+               <li>od 15000 EUR</li>
+               <li>od 20000 EUR</li>
+               <li>od 30000 EUR</li>
+               <li>od 40000 EUR</li>
+               <li>od 50000 EUR</li>
+               <li>od 100000 EUR</li>
+              </ul>
+             </div><p>Cena od</p> <i class="fa-solid fa-caret-down "></i></div>
+            <div class="dropdown-to dropdowns drop cena-do-dropdown">              
+              <div class="down">
+              <ul>
+                <li>Cena do</li>
+                <li>od 100 EUR</li>
+                <li>od 200 EUR</li>
+                <li>od 500 EUR</li>
+                <li>od 1000 EUR</li>
+                <li>od 1500 EUR</li>
+                <li>od 2000 EUR</li>
+                <li>od 2500 EUR</li>
+                <li>od 3000 EUR</li>
+                <li>od 3500 EUR</li>
+                <li>od 4000 EUR</li>
+                <li>od 4500 EUR</li>
+                <li>od 5000 EUR</li>
+                <li>od 6000 EUR</li>
+                <li>od 7000 EUR</li>
+                <li>od 8000 EUR</li>
+                <li>od 9000 EUR</li>
+                <li>od 10000 EUR</li>
+                <li>od 15000 EUR</li>
+                <li>od 20000 EUR</li>
+                <li>od 30000 EUR</li>
+                <li>od 40000 EUR</li>
+                <li>od 50000 EUR</li>
+                <li>od 100000 EUR</li>
+              </ul>
+             </div><p>Cena do</p> <i class="fa-solid fa-caret-down"></i></div>
+            <div class="row-3-dropdown dropdowns last regular drop prevozenih-dropdown">              
+              <div class="down">
+              <ul>
+                <li>Prevozenih do</li>
+                <li>do 5000 km</li>
+                <li>do 10000 km</li>
+                <li>do 15000 km</li>
+                <li>do 20000 km</li>
+                <li>do 25000 km</li>
+                <li>do 30000 km</li>
+                <li>do 35000 km</li>
+                <li>do 40000 km</li>
+                <li>do 45000 km</li>
+                <li>do 50000 km</li>
+                <li>do 55000 km</li>
+                <li>do 60000 km</li>
+                <li>do 65000 km</li>
+                <li>do 70000 km</li>
+                <li>do 75000 km</li>
+                <li>do 80000 km</li>
+                <li>do 85000 km</li>
+                <li>do 90000 km</li>
+                <li>do 95000 km</li>
+                <li>do 100000 km</li>
+                <li>do 110000 km</li>
+                <li>do 120000 km</li>
+                <li>do 130000 km</li>
+                <li>do 140000 km</li>
+                <li>do 150000 km</li>
+                <li>do 160000 km</li>
+                <li>do 170000 km</li>
+                <li>do 180000 km</li>
+                <li>do 190000 km</li>
+                <li>do 200000 km</li>
+                <li>do 210000 km</li>
+                <li>do 220000 km</li>
+                <li>do 230000 km</li>
+                <li>do 240000 km</li>
+                <li>do 250000 km</li>
+                <li>do 260000 km</li>
+              </ul>
+             </div><p>Prevoženih km do</p>
+              <i class="fa-solid fa-caret-down"></i></div>
           </div>
    
+          <!------------------------------------------------------------------------------------>
           <div class="row-3-top-sub">
-            <div class="row-3-dropdown dropdowns regular"><p>Vsi modeli</p> <i class="fa-solid fa-caret-down"></i></div>
-            <div class="dropdown-from dropdowns "><p>Letnik od</p> <i class="fa-solid fa-caret-down"></i></div>
-            <div class="dropdown-to dropdowns"><p>Letnik do</p> <i class="fa-solid fa-caret-down"></i></div>
-            <div class="row-3-dropdown dropdowns regular last"><p>Gorivo</p> <i class="fa-solid fa-caret-down"></i></div>
+            <div class="row-3-dropdown dropdowns regular drop model-dropdown" >
+              <div class="down">
+                <ul>
+                  <li>Vsi modeli</li>
+                </ul>
+               </div>
+               <p>Vsi modeli</p> <i class="fa-solid fa-caret-down"></i>
+              </div>
+
+            <div class="dropdown-from dropdowns drop letnik-od-dropdown">
+              <div class="down">
+                <ul>
+                 <li>Letnik od 2024</li>
+                 <li>Letnik od 2023</li>
+                 <li>Letnik od 2022</li>
+                 <li>Letnik od 2021</li>
+                 <li>Letnik od 2020</li>
+                 <li>Letnik od 2019</li>
+                 <li>Letnik od 2018</li>
+                 <li>Letnik od 2017</li>
+                 <li>Letnik od 2016</li>
+                 <li>Letnik od 2015</li>
+                 <li>Letnik od 2014</li>
+                 <li>Letnik od 2013</li>
+                 <li>Letnik od 2012</li>
+                 <li>Letnik od 2011</li>
+                 <li>Letnik od 2010</li>
+                 <li>Letnik od 2009</li>
+                 <li>Letnik od 2008</li>
+                 <li>Letnik od 2007</li>
+                 <li>Letnik od 2006</li>
+                 <li>Letnik od 2005</li>
+                 <li>Letnik od 2004</li>
+                 <li>Letnik od 2003</li>
+                 <li>Letnik od 2002</li>
+                 <li>Letnik od 2002</li>
+                 <li>Letnik od 2002</li>
+                 <li>Letnik od 2002</li>
+                </ul>
+               </div>
+              
+              <p>Letnik od</p> <i class="fa-solid fa-caret-down"></i>
+            </div>
+
+            <div class="dropdown-to dropdowns drop letnik-do-dropdown" >
+              <div class="down">
+                <ul>
+                  <li>Letnik do</li>
+                  <li>Letnik do 2024</li>
+                  <li>Letnik do 2023</li>
+                  <li>Letnik do 2022</li>
+                  <li>Letnik do 2021</li>
+                  <li>Letnik do 2020</li>
+                  <li>Letnik do 2019</li>
+                  <li>Letnik do 2018</li>
+                  <li>Letnik do 2017</li>
+                  <li>Letnik do 2016</li>
+                  <li>Letnik do 2015</li>
+                  <li>Letnik do 2014</li>
+                  <li>Letnik do 2013</li>
+                  <li>Letnik do 2012</li>
+                  <li>Letnik do 2011</li>
+                  <li>Letnik do 2010</li>
+                  <li>Letnik do 2009</li>
+                  <li>Letnik do 2008</li>
+                  <li>Letnik do 2007</li>
+                  <li>Letnik do 2006</li>
+                  <li>Letnik do 2005</li>
+                  <li>Letnik do 2004</li>
+                  <li>Letnik do 2003</li>
+                  <li>Letnik do 2002</li>
+                  <li>Letnik do 2002</li>
+                  <li>Letnik do 2002</li>
+                  <li>Letnik do 2002</li>
+                </ul>
+               </div>
+              <p>Letnik do</p> <i class="fa-solid fa-caret-down "></i></div>
+
+            <div class="row-3-dropdown dropdowns regular last drop gorivo-dropdown" >
+              <div class="down">
+                <ul>
+                  <li>Gorivo</li>
+                 <li>Bencin</li>
+                 <li>Dizel</li>
+                 <li>hibrid</li>
+                 <li>e-pogonli</li>
+                 <li>plin</li>
+    
+                </ul>
+               </div>
+              <p>Gorivo</p> <i class="fa-solid fa-caret-down"></i></div>
           </div>
 
 
-          <div class="row-3-dropdown dropdowns-long"><p>Prevoženih km do</p> <i class="fa-solid fa-caret-down"></i></div>
-          <div class="row-3-dropdown dropdowns-long"><p>Gorivo</p> <i class="fa-solid fa-caret-down"></i></div>
+          <div class="row-3-dropdown dropdowns-long">
+            <div class="down">
+              <ul>
+               <li>BMW</li>
+               <li>Citroen</li>
+               <li>Ford</li>
+               <li>Opel</li>
+               <li>Peugeot</li>
+               <li>Renault</li>
+               <li>AEV</li>
+               <li>Skoda</li>
+               <li>Volkswagen</li>
+               <li>Audi</li>
+               <li>Marcedes</li>
+               <li>Mazda</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+              </ul>
+             </div>
+            <p>Prevoženih km do</p> <i class="fa-solid fa-caret-down"></i></div>
+
+          <div class="row-3-dropdown dropdowns-long">
+            <div class="down">
+              <ul>
+               <li>BMW</li>
+               <li>Citroen</li>
+               <li>Ford</li>
+               <li>Opel</li>
+               <li>Peugeot</li>
+               <li>Renault</li>
+               <li>AEV</li>
+               <li>Skoda</li>
+               <li>Volkswagen</li>
+               <li>Audi</li>
+               <li>Marcedes</li>
+               <li>Mazda</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+               <li>Reno</li>
+              </ul>
+             </div>
+            
+            <p>Gorivo</p> <i class="fa-solid fa-caret-down"></i></div>
 
         </div>
         <div id="row-3-middle">
           <button id="filter-button"><i class="fa-solid fa-sliders"></i>Napredno iskanje z dodatnimi flitri</button>
-          
           <div id="row-3-search-div">
-          
-          <button id="search-button">
+           
+<!--href="pages/search.html" --> 
 
+            <a id="search-link">
+          <button id="search-button">
             <div id="magnifying-div">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-            
-            
             Iskanje vozil
           </button>
+        </a>
 
     <p id="row-3-extra">
       Napredno iskanje z dodatnimi filtri <i class="fa-solid fa-circle-plus"></i>
@@ -514,9 +832,12 @@
 
     </div>
 -->
-
     <script src="script/flickity.pkgd.min.js"></script>
     <script src="script/carousel.js"></script>
+    <script src="script/index.js"></script>
+    <script src="script/general.js"></script>
+    
+
   </body>
 
 
