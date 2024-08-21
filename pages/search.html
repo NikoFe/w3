@@ -77,12 +77,12 @@
     <!---------------------------------------------------------->
     <div class="main-wrapper">
       <div class="rubrika">
-        <h3>Rezultati osebna vozila</h3>
+        <h3 id="rubrika-title">Rezultati: osebna vozila</h3>
         <button id="search-button" onclick="search()">
           <div id="magnifying-div">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          Iskanje vozil
+          Objavi novi oglas
         </button>
       </div>
 
@@ -629,7 +629,7 @@
                     <ul>
                       <li>1. registracija 2023</li>
                       <li>Prevoženih 1694 km</li>
-                      <li>Gorivo bencinski motor</li>
+                      <li>Gorivo plin</li>
                       <li>Menjalnik avtomatski menjalnik</li>
                       <li>Motor 1998 ccm</li>
                     </ul>
@@ -754,7 +754,7 @@
                     <ul>
                       <li>1. registracija 2023</li>
                       <li>Prevoženih 1694 km</li>
-                      <li>Gorivo bencinski motor</li>
+                      <li>Gorivo e-pogon</li>
                       <li>Menjalnik avtomatski menjalnik</li>
                       <li>Motor 1998 ccm</li>
                     </ul>
@@ -780,14 +780,14 @@
                     <p>TOP-PONUDBA</p>
                   </div>
                   <div class="example-left">
-                    <img src="../images/e13.jpg" alt="" />
+                    <img src="../images/e20.jpg" alt="" />
                   </div>
                   <div class="full-vertical-line"></div>
                   <div class="example-right">
                     <ul>
                       <li>1. registracija 2023</li>
                       <li>Prevoženih 1694 km</li>
-                      <li>Gorivo bencinski motor</li>
+                      <li>Gorivo e-pogon</li>
                       <li>Menjalnik avtomatski menjalnik</li>
                       <li>Motor 1998 ccm</li>
                     </ul>
@@ -810,14 +810,14 @@
                     <p>TOP-PONUDBA</p>
                   </div>
                   <div class="example-left">
-                    <img src="../images/e13.jpg" alt="" />
+                    <img src="../images/e21.jpg" alt="" />
                   </div>
                   <div class="full-vertical-line"></div>
                   <div class="example-right">
                     <ul>
                       <li>1. registracija 2023</li>
                       <li>Prevoženih 1694 km</li>
-                      <li>Gorivo bencinski motor</li>
+                      <li>Gorivo plin</li>
                       <li>Menjalnik avtomatski menjalnik</li>
                       <li>Motor 1998 ccm</li>
                     </ul>
@@ -840,7 +840,7 @@
                     <p>TOP-PONUDBA</p>
                   </div>
                   <div class="example-left">
-                    <img src="../images/e13.jpg" alt="" />
+                    <img src="../images/e22.jpg" alt="" />
                   </div>
                   <div class="full-vertical-line"></div>
                   <div class="example-right">
@@ -898,7 +898,7 @@
 
             <div id="pagination">
               <div id="prevPage">
-                <div class="nextBlock" onclick="prevPage()">
+                <div class="nextBlock pagebuttons" onclick="prevPage()">
                   <i class="fa-solid fa-angle-left"></i>
                   Nazaj
                 </div>
@@ -906,8 +906,9 @@
 
               <div id="pageMid"></div>
               <div id="nextPage">
-                <div class="nextBlock" onclick="nextPage()">
-                  Naprej <i class="fa-solid fa-angle-right"></i>
+                <div class="nextBlock pagebuttons" onclick="nextPage()">
+                  Naprej
+                  <i class="fa-solid fa-angle-right pagebuttons"></i>
                 </div>
               </div>
             </div>

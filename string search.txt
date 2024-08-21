@@ -9,8 +9,6 @@ let rightRow3 = document.getElementById("search-right-row-3");
 let fillableList = document.getElementById("fillable-list");
 let models = document.getElementById("models");
 let pageMid = document.getElementById("pageMid");
-let mainTitle = document.getElementById("rubrika-title");
-
 let shown = 0;
 
 let test = document.getElementById("search-right-row-2");
@@ -34,9 +32,6 @@ let displayEnd;
 
 let currentBrand;
 let currentModel;
-
-let pageNumbers;
-let pageCount;
 
 function brandOption() {
   currentBrand = localStorage.getItem("znamka");
@@ -63,60 +58,22 @@ test.addEventListener("click", function () {
   examplesShow(2);
 });
 
-function displayPageNumbers(num) {
-  let counted = 0;
-  let required = 0;
-  if (pageCount < 5) {
-    required = pageCount;
-  } else {
-    if (num > 3 && num < pageCount - 3) {
-      required = 6;
-    } else required = 5;
-  }
-  let current = 0;
-
-  console.log("---------------------NUM: " + num);
-  pageNumbers[num].style.display = "flex";
-
-  for (let i = 1; i < Infinity; i++) {
-    current = Number(num - i);
-    if (current >= 0) {
-      if (counted < required) {
-        console.log("DOWN " + current);
-
-        pageNumbers[current].style.display = "flex";
-        counted++;
-      } else {
-        pageNumbers[current].style.display = "none";
-      }
-    }
-    current = Number(num + i);
-    if (current < pageCount) {
-      if (counted < required) {
-        console.log("UP " + current);
-
-        pageNumbers[current].style.display = "flex";
-        counted++;
-      } else {
-        pageNumbers[current].style.display = "none";
-      }
-    }
-
-    if (i == 50) {
-      break;
-    }
-  }
-}
-
 function examplesShow(num) {
   // alert("A");
-  pageNumbers = pageMid.querySelectorAll("div");
   prevDisplay = currPage;
   currPage = num;
 
+  let pageNumbers = pageMid.querySelectorAll("div");
   console.log("PAGE NUMBERS: " + pageNumbers);
   console.log("PAGE NUMBERS LENGTH: " + pageNumbers.length);
-  displayPageNumbers(num - 1);
+  for (let j = 0; j < pageNumbers.length; j++) {
+    if (j < num - 4 || j > num + 4) {
+      console.log("BLANK");
+      pageNumbers[j].style.display = "none";
+    } else {
+      pageNumbers[j].style.display = "flex";
+    }
+  }
 
   displayStart = (currPage - 1) * pageSize;
   displayEnd = displayStart + pageSize - 1;
@@ -155,11 +112,21 @@ function examplesShow(num) {
     }
   }
 
+  //examples[displayStart].style.backgroundColor = "yellow";
+  //examples[displayEnd].style.backgroundColor = "blue";
+
+  //---------------------------------------------------
+
+  //---------------------------------------------------
+  //---------------------------------------------------
+  //---------------------------------------------------
+
   for (let i = 0; i < nextBlocks.length; i++) {
     nextBlocks[i].style.backgroundColor = "white";
   }
-
-  nextBlocks[currPage].style.backgroundColor = "lightGray";
+  if (currPage < 7) {
+    nextBlocks[currPage].style.backgroundColor = "lightGray";
+  }
 }
 
 //fillableList.style.backgroundColor = "brown";
@@ -172,41 +139,19 @@ let price = "";
 let prices;
 let menjalnik = "";
 
-function searchFor(lis) {
-  let firstStr = lis.substring(0, lis.indexOf(" "));
-  let reversed = "";
-  let temp = "";
-  let temp2 = "";
-  //console.log("/////////////////// " + firstStr);
-  switch (firstStr) {
-    case "1.":
-      reversed = lis.split("").reverse().join("");
-      temp = reversed.substring(0, reversed.indexOf(" "));
-      return temp.split("").reverse().join("");
+function searchAfterSpace(lis) {
+  return lis.substring(lis.indexOf(" ") + 1);
+}
 
-      break;
-    case "Prevoženih":
-      return lis.substring(lis.indexOf(" ")).trim();
-      break;
-    case "Gorivo":
-      temp = lis.substring(lis.indexOf(" ")).trim();
-      temp2 = temp.substring(0, temp.indexOf(" ")).trim();
+function searchBetweenSpace(lis) {
+  let firstHalf = searchAfterSpace(lis);
+  return firstHalf.substring(0, firstHalf.indexOf(" "));
+}
+function lastString(lis) {
+  let temp = lis.split("").reverse().join("");
+  let temp2 = temp.substring(0, temp.indexOf(" "));
 
-      if (temp2 == "") {
-        return temp;
-      }
-      return temp2;
-
-      break;
-    case "Menjalnik":
-      temp = lis.substring(lis.indexOf(" ")).trim();
-      temp2 = temp.substring(0, temp.indexOf(" ")).trim();
-      return temp2;
-      break;
-    case "Motor":
-      return lis.substring(lis.indexOf(" "));
-      break;
-  }
+  return temp2.split("").reverse().join("");
 }
 
 function pass() {
@@ -291,14 +236,14 @@ function pass() {
     return false;
   }
 
-  //console.log(Number(localStorage.getItem("cena-od")));
-  //console.log(Number(localStorage.getItem("cena-do")));
-  //console.log(Number(price));
+  console.log(Number(localStorage.getItem("cena-od")));
+  console.log(Number(localStorage.getItem("cena-do")));
+  console.log(Number(price));
   if (
     Number(localStorage.getItem("cena-od")) > Number(price) ||
     Number(localStorage.getItem("cena-do")) < Number(price)
   ) {
-    console.log("------------------F cena-----------------------" + price);
+    console.log("------------------F cena-----------------------");
     return false;
   }
 
@@ -325,10 +270,7 @@ function checkIfExists(model) {
 
 function createCustomLi(model) {
   //console.log("MODEL: " + model);
-
-  console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
-
-  if (!checkIfExists(model) && pass()) {
+  if (!checkIfExists(model)) {
     console.log("CREATE " + model);
     let customLi = document.createElement("div");
     let left = document.createElement("div");
@@ -353,72 +295,48 @@ function createCustomLi(model) {
     customLi.className = "custom-li";
 
     fillableList.appendChild(customLi);
+
+    /*
+  <div class="custom-li">
+  <div class="left">
+    <i class="fa-solid fa-caret-right"></i>
+    <p>Video Klic</p>
+  </div>
+
+  <p>1866</p>
+</div>*/
   }
 }
 
-function leftAdd(examples) {
+function leftAdd() {
   if (localStorage.getItem("znamka") != "Vse znamke") {
-    console.log(examples);
-    //logVariables();
+    for (let i = 0; i < examples.length; i++) {
+      let top = examples[i].querySelectorAll("h4");
 
-    let top = examples.querySelectorAll("h4");
+      let trimmed = top[0].innerHTML.trim();
+      let secondHalf = trimmed.substring(trimmed.indexOf(" ") + 1);
 
-    let trimmed = top[0].innerHTML.trim();
-    let secondHalf = trimmed.substring(trimmed.indexOf(" ") + 1);
+      znamka = trimmed.substring(0, trimmed.indexOf(" "));
 
-    znamka = trimmed.substring(0, trimmed.indexOf(" "));
+      if (znamka == localStorage.getItem("znamka")) {
+        // !!!!!!!!!!!!!!! TILL YOU REACH : read the model!""
+        model = trimmed.substring(
+          trimmed.indexOf(" ") + 1,
+          trimmed.indexOf(" ") + secondHalf.indexOf(" ") + 1
+        );
 
-    if (znamka == localStorage.getItem("znamka")) {
-      // !!!!!!!!!!!!!!! TILL YOU REACH : read the model!""
-      model = trimmed.substring(
-        trimmed.indexOf(" ") + 1,
-        trimmed.indexOf(" ") + secondHalf.indexOf(" ") + 1
-      );
-
-      createCustomLi(model);
+        createCustomLi(model);
+      }
     }
   }
 }
 
-function singleFilter() {
-  let lis = examples[i].querySelectorAll("li");
-
-  let top = examples[i].querySelectorAll("h4");
-
-  let trimmed = top[0].innerHTML.trim();
-  let secondHalf = trimmed.substring(trimmed.indexOf(" ") + 1);
-
-  znamka = trimmed.substring(0, trimmed.indexOf(" "));
-  model = trimmed.substring(
-    trimmed.indexOf(" ") + 1,
-    trimmed.indexOf(" ") + secondHalf.indexOf(" ") + 1
-  );
-  if (model == "" || model == " ") {
-    model = trimmed.substring(trimmed.indexOf(" "));
-  }
-
-  letnik = searchFor(lis[0].innerHTML);
-  prevozenih = searchFor(lis[1].innerHTML);
-  gorivo = searchFor(lis[2].innerHTML);
-  menjalnik = searchFor(lis[3].innerHTML);
-  motor = searchFor(lis[4].innerHTML);
-  prices = examples[i].querySelectorAll(".price-div p");
-  price = prices[0].innerHTML;
-
-  price = price.replace(".", "");
-  price = price.replace(" ", "");
-  price = price.replace("$", "");
-}
-
 function filter() {
-  fillableList.innerHTML = "";
   shown = 0;
   //alert("B");
   let singlePass = false;
 
   for (let i = 0; i < examples.length; i++) {
-    console.log("I: " + i);
-    //console.log(examples[i]);
     let lis = examples[i].querySelectorAll("li");
 
     let top = examples[i].querySelectorAll("h4");
@@ -431,15 +349,12 @@ function filter() {
       trimmed.indexOf(" ") + 1,
       trimmed.indexOf(" ") + secondHalf.indexOf(" ") + 1
     );
-    if (model == "" || model == " ") {
-      model = trimmed.substring(trimmed.indexOf(" "));
-    }
 
-    letnik = searchFor(lis[0].innerHTML);
-    prevozenih = searchFor(lis[1].innerHTML);
-    gorivo = searchFor(lis[2].innerHTML);
-    menjalnik = searchFor(lis[3].innerHTML);
-    motor = searchFor(lis[4].innerHTML);
+    letnik = lastString(lis[0].innerHTML);
+    prevozenih = searchBetweenSpace(lis[1].innerHTML);
+    gorivo = searchBetweenSpace(lis[2].innerHTML);
+    menjalnik = searchBetweenSpace(lis[3].innerHTML);
+    motor = searchAfterSpace(lis[4].innerHTML);
     prices = examples[i].querySelectorAll(".price-div p");
     price = prices[0].innerHTML;
 
@@ -447,16 +362,30 @@ function filter() {
     price = price.replace(" ", "");
     price = price.replace("$", "");
 
+    console.log(
+      "letnik_:" +
+        letnik +
+        "| prevozenih_:" +
+        prevozenih +
+        "| gorivo_:" +
+        gorivo +
+        "| znamka_:" +
+        znamka +
+        "| model_:" +
+        model +
+        "| menjalnik:" +
+        menjalnik +
+        "| price:" +
+        price
+    );
+
     if (!pass()) {
       examples[i].style.display = "none";
       examples[i].style.border = "rgba(0,0,0,0)";
 
       //examples[i].style.backgroundColor = "red";
     } else {
-      if (typeof examples[i] !== "undefined") {
-        console.log(typeof examples[i]);
-        leftAdd(examples[i]);
-      }
+      console.log("PASS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
       shown++;
       examples[i].style.backgroundColor = "rgba(1,1,1,0)";
       singlePass = true;
@@ -473,7 +402,7 @@ function filter() {
     rightRow1.style.display = "flex";
   }
 
-  //leftAdd();
+  leftAdd();
 }
 
 function showLocals() {
@@ -490,7 +419,8 @@ function showLocals() {
 }
 
 function generatePagination() {
-  pageCount = Math.ceil(shown / pageSize);
+  let pageCount = Math.ceil(shown / pageSize);
+
   console.log("Examples.length: " + shown);
   console.log("pageSitze: " + pageSize);
 
@@ -499,7 +429,7 @@ function generatePagination() {
   for (let i = 0; i < pageCount; i++) {
     newPage = document.createElement("div");
     newP = document.createElement("p");
-    newP.innerHTML = i.toString();
+    newP.innerHTML = (i + 1).toString();
     newPage.className = "nextBlock";
     newPage.appendChild(newP);
     newPage.style.height = "80px";
@@ -514,34 +444,6 @@ function generatePagination() {
   }
 }
 
-function searchTitle() {
-  let concatenated = (mainTitle.innerText =
-    mainTitle.innerText +
-    " " +
-    localStorage.getItem("znamka") +
-    " " +
-    localStorage.getItem("model"));
-}
-
-function logVariables() {
-  console.log(
-    "letnik_:" +
-      letnik +
-      "| prevozenih_:" +
-      prevozenih +
-      "| gorivo_:" +
-      gorivo +
-      "| znamka_:" +
-      znamka +
-      "| model_:" +
-      model +
-      "| menjalnik:" +
-      menjalnik +
-      "| price:" +
-      price
-  );
-}
-
 window.onload = function () {
   //let first = 2;
   //let second = 5;
@@ -551,5 +453,4 @@ window.onload = function () {
   generatePagination();
   examplesShow(1);
   brandOption();
-  searchTitle();
 };

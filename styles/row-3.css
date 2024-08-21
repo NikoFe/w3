@@ -217,3 +217,10 @@
 .long {
   position: relative;
 }
+
+#models-dropdown li {
+  display: flex;
+}
+#models-dropdown li:first-child {
+  display: flex;
+}
