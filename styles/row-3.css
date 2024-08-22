@@ -90,7 +90,7 @@
   color: orangered;
 }
 
-#search-button {
+.search-button {
   display: flex;
   height: 35px;
   align-items: center;
@@ -105,7 +105,7 @@
   font-size: 14px;
 }
 
-#magnifying-div {
+.magnifying-div {
   border: solid 0.5px gray;
   height: 95%;
   width: 48px;

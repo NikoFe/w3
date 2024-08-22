@@ -147,8 +147,6 @@ function pass(examples) {
     localStorage.getItem("znamka") != znamka
   ) {
     console.log("-------------A znamka---------------");
-    console.log("curr znamka: " + znamka);
-    console.log("expected znamka: " + localStorage.getItem("znamka"));
     return false;
   }
   if (
@@ -258,16 +256,14 @@ function createFiltered() {
   let backup = filtered.length;
 
   for (let i = 0; i < filtered.length; i++) {
-    createFilteredVariables(filtered[i]);
+    createFilteredVariables(examples[i]);
     console.log("I: " + i);
     // console.log("FILTERED: " + filtered.length);
     logVariables();
     if (!pass()) {
       console.log("NOT PASSED!");
       filtered.splice(i, 1);
-      // console.log("filtered length: " + filtered.length);
-      i--;
-      console.log("I2: " + i);
+      i = 0;
     }
   }
   console.log("FILTERED LENGRH: " + filtered.length);
@@ -306,9 +302,7 @@ function showPage(num) {
   console.log("NUM: " + Number(num - 1));
   nextBlocks[Number(num)].style.backgroundColor = "lightGray";
 
-  console.log("FILTERED LENGTH DISPLAY: " + filtered.length);
-
-  if (num < pageCount + 1) {
+  if (num < pageCount) {
     for (let i = 0; i < filtered.length; i++) {
       filtered[i].style.diplay = "none";
     }
@@ -317,9 +311,6 @@ function showPage(num) {
     end = start + pageSize;
     console.log("START: " + start);
     console.log("END: " + end);
-    if (end >= filtered.length) {
-      end = filtered.length;
-    }
 
     carDatabase.innerHTML = "";
     for (let i = start; i < end; i++) {
@@ -327,17 +318,7 @@ function showPage(num) {
       carDatabase.appendChild(filtered[i]);
     }
   }
-
-  if (filtered.length == false) {
-    emptySearch.style.display = "flex";
-    rightRow1.style.display = "none";
-    rightRow2.style.display = "none";
-    rightRow3.style.display = "none";
-  } else {
-    emptySearch.style.display = "none";
-    rightRow1.style.display = "flex";
-    displayPageNumbers(num - 1);
-  }
+  displayPageNumbers(num - 1);
 }
 
 function searchTitle() {
@@ -350,9 +331,18 @@ function searchTitle() {
 }
 
 function displayPageNumbers(num) {
-  pageNumbers = pageMid.querySelectorAll("div");
+  let leftAdded = 0;
+  let rightAdded = 0;
   let counted = 0;
   let required = 0;
+
+  if (num > 2 && num < nextBlocks.length - 3) {
+    rightAdded++;
+  }
+  if (num > 3 && num < nextBlocks.length - 3) {
+    leftAdded++;
+  }
+
   if (pageCount < 5) {
     required = pageCount;
   } else {
@@ -363,103 +353,35 @@ function displayPageNumbers(num) {
   let current = 0;
 
   console.log("---------------------NUM: " + num);
-  //pageNumbers[num].style.display = "flex";
+  number = Number(num);
+  console.log("pageNumbers lengrh: " + nextBlocks.length);
 
-  for (let i = 1; i < Infinity; i++) {
-    current = Number(num - i);
+  nextBlocks[number].style.display = "flex";
+
+  for (let i = 0; i < nextBlocks.length; i++) {}
+
+  for (let i = 1; i < nextBlocks.length; i++) {
+    current = Number(number - i);
 
     if (current >= 0) {
-      if (counted < required) {
-        //console.log("DOWN " + current);
+      if (counted < required - leftAdded) {
+        console.log("DOWN " + current);
 
-        pageNumbers[current].style.display = "flex";
+        nextBlocks[current].style.display = "flex";
         counted++;
       } else {
-        pageNumbers[current].style.display = "none";
       }
     }
-    current = Number(num + i);
-    if (current < pageCount) {
-      if (counted < required) {
-        // console.log("UP " + current);
+    current = Number(number + i);
+    if (current < pageCount + 1) {
+      if (counted < required + 1 + rightAdded) {
+        console.log("UP " + current);
 
-        pageNumbers[current].style.display = "flex";
+        nextBlocks[current].style.display = "flex";
         counted++;
       } else {
-        pageNumbers[current].style.display = "none";
+        nextBlocks[current].style.display = "none";
       }
-    }
-
-    if (i == 50) {
-      break;
-    }
-  }
-}
-
-function createLi() {
-  console.log("CREATE " + model);
-  let customLi = document.createElement("div");
-  let left = document.createElement("div");
-  let i1 = document.createElement("i");
-  let p1 = document.createElement("p");
-  let p2 = document.createElement("p");
-
-  p2.innerHTML = "1";
-  p1.innerHTML = model;
-  //console.log("MODEL: " + model);
-  i1.className = "fa-solid fa-caret-right";
-
-  left.appendChild(i1);
-  left.appendChild(p1);
-  left.className = "left";
-
-  left.style.display = "flex";
-
-  customLi.appendChild(left);
-  customLi.appendChild(p2);
-
-  customLi.className = "custom-li";
-
-  fillableList.appendChild(customLi);
-}
-
-function alreadyExists() {
-  customLis = fillableList.querySelectorAll(".custom-li");
-  for (let i = 0; i < customLis.length; i++) {
-    let text = customLis[i].querySelectorAll(".left p")[0].innerHTML;
-
-    console.log(model + " - " + text);
-    if (text == model) {
-      console.log("M");
-      customLis[i].querySelectorAll("p")[1].innerHTML =
-        Number(customLis[0].querySelectorAll("p")[1].innerHTML) + 1;
-      return true;
-    }
-    console.log("MM");
-  }
-  return false;
-}
-
-function displayModels() {
-  for (let i = 0; i < filtered.length; i++) {
-    let lis = filtered[i].querySelectorAll("li");
-
-    let top = filtered[i].querySelectorAll("h4");
-
-    let trimmed = top[0].innerHTML.trim();
-    let secondHalf = trimmed.substring(trimmed.indexOf(" ") + 1);
-
-    znamka = trimmed.substring(0, trimmed.indexOf(" "));
-    model = trimmed.substring(
-      trimmed.indexOf(" ") + 1,
-      trimmed.indexOf(" ") + secondHalf.indexOf(" ") + 1
-    );
-    if (model == "" || model == " ") {
-      model = trimmed.substring(trimmed.indexOf(" "));
-    }
-
-    if (!alreadyExists()) {
-      createLi();
     }
   }
 }
@@ -467,11 +389,9 @@ function displayModels() {
 window.onload = function () {
   //let first = 2;
   //let second = 5;
-  singlePass = false;
   logLocals();
   createFiltered();
   generatePagination();
   showPage(1);
   searchTitle();
-  displayModels();
 };

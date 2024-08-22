@@ -312,7 +312,7 @@ function error() {
   h3[0].innerHTML = "Pozabili ste izbrati iskalne kriterije:";
 }
 
-let search = document.getElementById("search-button");
+let search = document.getElementById("search-index");
 search.addEventListener("click", function (event) {
   event.preventDefault();
   if (

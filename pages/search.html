@@ -77,9 +77,9 @@
     <!---------------------------------------------------------->
     <div class="main-wrapper">
       <div class="rubrika">
-        <h3 id="rubrika-title">Rezultati: osebna vozila</h3>
-        <button id="search-button" onclick="search()">
-          <div id="magnifying-div">
+        <h3 id="rubrika-title">Rezultati: Osebna vozila</h3>
+        <button class="search-button" onclick="search()">
+          <div class="magnifying-div">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
           Objavi novi oglas
@@ -147,6 +147,13 @@
                 <li></li>
               </ul>
             </div>
+            <hr />
+            <button id="red-button" class="search-button" onclick="search()">
+              <div class="magnifying-div">
+                <i class="fa-regular fa-star"></i>
+              </div>
+              Shrani iskanje
+            </button>
           </div>
         </div>
 
@@ -914,8 +921,10 @@
             </div>
 
             <div id="legenda">
-              <div id="ogled_legende">
-                <i class="fa-solid fa-circle-info"></i>
+              <div class="search-button" id="legenda-search">
+                <div class="magnifying-div">
+                  <i class="fa-solid fa-circle-info"></i>
+                </div>
                 <p>Ogled legende oznak</p>
               </div>
             </div>
@@ -942,7 +951,7 @@
     </div>
 
     <!---------------------------------------------------------->
-
+    <div class="white-div"></div>
     <div id="row-7" class="rows">
       <div class="main-wrapper">
         <ul class="row-7-list">
@@ -986,6 +995,7 @@
         </ul>
       </div>
     </div>
+
     <div id="row-8" class="rows">
       <a>© Avtonet d.o.o. 2024</a>
       <img src="../images/logo.png" alt="logo.png" />
