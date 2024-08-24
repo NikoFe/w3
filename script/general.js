@@ -29,3 +29,10 @@ for (let i = 0; i < pageButtons.length; i++) {
     window.location = pageButtons[i].querySelectorAll("a")[0].href;
   });
 }
+
+function showCars() {
+  localStorage.setItem("vehicle", "car");
+}
+function showMotos() {
+  localStorage.setItem("vehicle", "moto");
+}

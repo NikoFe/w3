@@ -10,18 +10,14 @@ let fillableList = document.getElementById("fillable-list");
 let models = document.getElementById("models");
 let pageMid = document.getElementById("pageMid");
 let mainTitle = document.getElementById("rubrika-title");
+let resultCount = document.querySelectorAll("#result-count p")[0];
 
 let test = document.getElementById("search-right-row-2");
 let modelPass;
 
-let examples = document.getElementsByClassName("example");
+let examples, filtered, examplesArray;
 let nextBlocks = document.getElementsByClassName("nextBlock");
 let modelList = document.querySelectorAll("#models li");
-let filtered = Array.prototype.slice.call(examples);
-
-console.log("EXAMPLES-LENGTH: " + examples.length);
-
-let examplesArray = Array.from(examples);
 
 let customLis;
 let currPage = 1;
@@ -46,16 +42,18 @@ function logVariables() {
       letnik +
       "| prevozenih_:" +
       prevozenih +
-      "| gorivo_:" +
-      gorivo +
+      // "| gorivo_:" +
+      //   gorivo +
       "| znamka_:" +
       znamka +
       "| model_:" +
       model +
-      "| menjalnik:" +
-      menjalnik +
+      // "| menjalnik:" +
+      //  menjalnik +
       "| price:" +
-      price
+      price +
+      "| motor:" +
+      motor
   );
 }
 function logLocals() {
@@ -129,9 +127,14 @@ function createFilteredVariables(examples) {
 
   letnik = searchFor(lis[0].innerHTML);
   prevozenih = searchFor(lis[1].innerHTML);
-  gorivo = searchFor(lis[2].innerHTML);
-  menjalnik = searchFor(lis[3].innerHTML);
-  motor = searchFor(lis[4].innerHTML);
+
+  if (localStorage.getItem("vehicle") == "car") {
+    gorivo = searchFor(lis[2].innerHTML);
+    menjalnik = searchFor(lis[3].innerHTML);
+  }
+
+  motor = searchFor(lis[lis.length - 1].innerHTML);
+
   prices = examples.querySelectorAll(".price-div p");
   price = prices[0].innerHTML;
 
@@ -159,45 +162,49 @@ function pass(examples) {
     console.log("-------------B model---------------");
     return false;
   }
-  if (
-    localStorage.getItem("gorivo") == "Dizel" &&
-    gorivo != "diesel" &&
-    gorivo != "dizel" &&
-    gorivo != "Dizel" &&
-    gorivo != "Diesel" &&
-    gorivo != "dizelski" &&
-    gorivo != "Dizelski" &&
-    gorivo != "dieselski" &&
-    gorivo != "Dieselski"
-  ) {
-    console.log("-------------C gorivo---------------");
+  //////////////////////////////////////////////////////////////////////////////
+  if (localStorage.getItem("vehicle") == "car") {
+    if (
+      localStorage.getItem("gorivo") == "Dizel" &&
+      gorivo != "diesel" &&
+      gorivo != "dizel" &&
+      gorivo != "Dizel" &&
+      gorivo != "Diesel" &&
+      gorivo != "dizelski" &&
+      gorivo != "Dizelski" &&
+      gorivo != "dieselski" &&
+      gorivo != "Dieselski"
+    ) {
+      console.log("-------------C gorivo---------------");
 
-    return false;
-  }
-  if (
-    localStorage.getItem("gorivo") == "Bencin" &&
-    gorivo != "bencin" &&
-    gorivo != "bencinski" &&
-    gorivo != "Bencin" &&
-    gorivo != "Bencinski"
-  ) {
-    console.log("-------------D gorivo---------------");
-    return false;
-  }
-  if (
-    localStorage.getItem("gorivo") == "e-pogoni" &&
-    gorivo != "e-pogon" &&
-    gorivo != "električni" &&
-    gorivo != "elektricni"
-  ) {
-    console.log("-------------gorivo " + gorivo + "---------------");
-    console.log("-------------D1 e-pogon---------------");
-    return false;
-  }
-  if (localStorage.getItem("gorivo") == "plin" && gorivo != "plin") {
-    console.log("-------------D2 plin---------------");
-    return false;
-  }
+      return false;
+    }
+    if (
+      localStorage.getItem("gorivo") == "Bencin" &&
+      gorivo != "bencin" &&
+      gorivo != "bencinski" &&
+      gorivo != "Bencin" &&
+      gorivo != "Bencinski"
+    ) {
+      console.log("-------------D gorivo---------------");
+      return false;
+    }
+    if (
+      localStorage.getItem("gorivo") == "e-pogoni" &&
+      gorivo != "e-pogon" &&
+      gorivo != "električni" &&
+      gorivo != "elektricni"
+    ) {
+      console.log("-------------gorivo " + gorivo + "---------------");
+      console.log("-------------D1 e-pogon---------------");
+      return false;
+    }
+    if (localStorage.getItem("gorivo") == "plin" && gorivo != "plin") {
+      console.log("-------------D2 plin---------------");
+      return false;
+    }
+  } //////////////////////////////////////////////////////////////////////////////
+
   if (
     Number(localStorage.getItem("letnik-od")) > Number(letnik) ||
     Number(localStorage.getItem("letnik-do")) < Number(letnik)
@@ -271,7 +278,7 @@ function createFiltered() {
     }
   }
   console.log("FILTERED LENGRH: " + filtered.length);
-  carDatabase.innerHTML = "";
+  //carDatabase.innerHTML = "";
 }
 
 function nextPage() {
@@ -464,14 +471,43 @@ function displayModels() {
   }
 }
 
+function fillResultCount() {
+  resultCount.innerText = "Preko " + filtered.length + " oglasov:";
+}
+
 window.onload = function () {
   //let first = 2;
   //let second = 5;
   singlePass = false;
+
+  if (localStorage.getItem("vehicle") == "car") {
+    alert("CAR1");
+    generateCars();
+  } else if (localStorage.getItem("vehicle") == "moto") {
+    alert("MOTO");
+    generateMotos();
+  } else {
+    generateCars();
+    alert("CAR2");
+  }
+
+  examples = document.getElementsByClassName("example");
+  filtered = Array.prototype.slice.call(examples);
+  console.log("EXAMPLES-LENGTH: " + examples.length);
+  examplesArray = Array.from(examples);
+  console.log("EXAMPLES-LENGTH: " + examples.length);
+
   logLocals();
+
   createFiltered();
+
   generatePagination();
+
   showPage(1);
+
   searchTitle();
+
   displayModels();
+
+  fillResultCount();
 };

@@ -18,6 +18,10 @@
 #avto-row-3 img,
 #avto-row-4 img {
   width: 100px;
+  max-height: 50px;
+}
+.smaller-img {
+  width: 60px !important;
 }
 
 .extra-row-row {
@@ -92,4 +96,9 @@
 
 #green-div a:hover {
   text-decoration: underline;
+}
+
+#mini-moto {
+  width: 50px !important;
+  padding-top: 20px;
 }

@@ -1,0 +1,70 @@
+@media screen and (max-width: 992px) {
+  #row-2 {
+    display: none !important;
+  }
+  #search-left {
+    display: none;
+  }
+
+  #main-wrapper {
+    width: 100%;
+  }
+  #search {
+    width: 100%;
+  }
+  #car-database {
+    width: 100%;
+  }
+  #search-right {
+    width: 100%;
+  }
+  .example-left {
+    width: 335px;
+  }
+  .example-right {
+    width: 57%;
+  }
+  #result-count {
+    display: block !important;
+  }
+
+  #row-7 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  #row-8 {
+    display: none;
+  }
+
+  #row-9 {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+  }
+  #search-right-row-1 {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #rubrika-top .search-button {
+    display: none;
+  }
+  #search-right-row-2 {
+    display: none !important;
+  }
+  .example-right ul {
+    font-size: 12px;
+  }
+  .example-right-bottom {
+    flex-direction: column !important;
+    gap: 20px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+  }
+  .example {
+    height: fit-content;
+  }
+}
