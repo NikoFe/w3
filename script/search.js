@@ -481,14 +481,11 @@ window.onload = function () {
   singlePass = false;
 
   if (localStorage.getItem("vehicle") == "car") {
-    alert("CAR1");
     generateCars();
   } else if (localStorage.getItem("vehicle") == "moto") {
-    alert("MOTO");
     generateMotos();
   } else {
     generateCars();
-    alert("CAR2");
   }
 
   examples = document.getElementsByClassName("example");

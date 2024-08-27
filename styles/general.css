@@ -126,3 +126,29 @@ h4 {
   background-color: lightgray;
   height: 100%;
 }
+
+.whiteDiv {
+  background-color: white;
+  border-radius: 5px;
+  border: solid 0.5px lightgray;
+  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.4);
+  padding: 8px 10px;
+}
+
+hr {
+  width: 100%;
+  color: lightgray;
+}
+
+.verticalFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.whiteText {
+  color: rgba(0, 0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+}

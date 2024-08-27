@@ -1,0 +1,290 @@
+.cr1 {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.cr1 h5 {
+  margin-bottom: 10px;
+}
+
+.cr2 .option-bottom {
+  gap: 250px;
+}
+
+.option-bottom {
+  display: flex;
+  justify-content: start;
+  gap: 100px;
+  margin-top: 10px;
+}
+
+#cr-wrapper {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+#cr-wrapper p {
+  margin: 0px !important;
+}
+
+#cr-wrapper h5 {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cr3 {
+  justify-content: start;
+}
+.cr3 .option {
+  width: 200px;
+  /* background-color: yellow;*/
+}
+
+.cr3 img {
+  width: 80px !important;
+}
+
+.option-row {
+  display: flex;
+  justify-content: space-between;
+  width: 87%;
+  margin-bottom: 25px;
+}
+
+.cr4 .drop,
+.cr6 .drop,
+.cr7 .drop {
+  width: 275px !important;
+  margin-right: 18px;
+  margin-bottom: 10px;
+}
+.cr4 .long,
+.cr6 .long {
+  width: 95.3% !important;
+}
+
+.cr-4-option,
+.cr-6-option {
+  display: flex;
+  flex-direction: column;
+}
+
+.options-close {
+  display: flex;
+}
+
+.options-close .option {
+  height: 30px;
+  background-color: cadetblue;
+  align-self: flex-end;
+}
+
+#cr-wrapper h6 {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+}
+
+.close-down {
+  justify-content: start;
+  gap: 10px;
+}
+
+.cr5 .options-close {
+  margin-bottom: 20px;
+}
+
+.cr5 .drop {
+  width: 280px;
+}
+
+.fa-square-check {
+  color: orange;
+  font-size: 33px;
+}
+.fa-square {
+  font-size: 33px;
+  color: lightgray;
+}
+
+.sticky {
+  display: flex;
+  margin-right: 5px;
+}
+
+.dropClose {
+  margin-right: 0px !important;
+}
+
+.cr-8-row {
+  margin-bottom: 15px;
+}
+
+.cr8 h6 {
+  margin-bottom: 15px !important;
+}
+
+.cr8 .option-bottom {
+  margin-top: 0px;
+}
+
+.circleDivMid {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  border: 1px solid gray;
+}
+
+#cr9Add1 {
+  width: 160px;
+  height: 45px;
+}
+#cr9Add2 {
+  width: 100px;
+  height: 20px;
+}
+
+.cr9 .option-bottom {
+  gap: 135px;
+}
+.cr9 .option-bottom:last-child .option:last-child {
+  align-items: center;
+}
+
+.cr9 .option {
+  align-items: flex-start;
+}
+
+.fa-circle-dot {
+  font-size: 28px;
+  color: orangered;
+}
+.rubrika {
+  margin-bottom: 200px;
+}
+.cr10 .option-bottom {
+  width: 73%;
+  justify-content: space-between;
+}
+
+.cr10 .circleDivMid {
+  border: none;
+  width: 27px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.Any {
+  background: linear-gradient(100deg, yellow, blue);
+}
+
+.White {
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 100% !important;
+  border: 1px solid gray !important;
+}
+
+.Black {
+  background-color: black;
+}
+.Silver {
+  background: linear-gradient(100deg, White, Gray);
+}
+.Blue {
+  background-color: blue;
+}
+.Gray {
+  background-color: gray;
+}
+
+.Yellow {
+  background-color: yellow;
+}
+.Red {
+  background-color: red;
+}
+
+.Green {
+  background-color: green;
+}
+.Any2 {
+  background: linear-gradient(100deg, white, black);
+}
+.Beige {
+  background: linear-gradient(100deg, white, black);
+}
+.Brown {
+  background-color: brown;
+}
+
+.longSearchButton {
+  width: 90%;
+  margin: auto;
+  height: 50px;
+  margin-top: 10px;
+}
+
+#ogled {
+  margin: auto;
+  font-size: 15px;
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+
+#ogled:hover {
+  text-decoration: underline;
+}
+.cr8 .option-bottom {
+  gap: 125px;
+  justify-content: start;
+}
+
+.cr8 .option {
+  font-size: 14px;
+  width: 200px !important;
+}
+.cr8 .option p {
+  display: flex;
+}
+
+.motoCr3 .option {
+  width: 230px !important;
+
+  gap: 80px;
+}
+
+.motoCr3 .option-row {
+  gap: 90px;
+  justify-content: start;
+  width: 95%;
+}
+.motoCr3 hr {
+  margin-bottom: 30px;
+}
+
+.motoCr3 img {
+  width: 60px !important;
+}
+
+.moto-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
